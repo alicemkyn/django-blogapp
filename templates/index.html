@@ -1,0 +1,14 @@
+{% extends 'layout.html' %} {% block body %}
+<div class="jumbotron text-center">
+    <h3>Welcome to the Software Science Blog</h3>
+    <p>In this blog you can share your own experiences, ideas, projects and articles about software engineering and development process.By sharing your knowledge here, you can help other people to have new ideas about this science.</p>
+</div>
+<p>
+    {% if request.user.is_authenticated %}
+        Already Logged In, {{request.user.username}}
+    {% else %}
+        Not Logged In
+    {% endif %}
+</p>
+
+{% endblock body %}
